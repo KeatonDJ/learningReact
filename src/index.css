@@ -17,3 +17,8 @@ code {
   margin: 10px;
   padding: 10px;
 }
+
+.clockSettings {
+  display: inline-block;
+  float: left;
+}

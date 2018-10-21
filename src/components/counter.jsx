@@ -12,13 +12,13 @@ class Counter extends Component {
 
   render() {
     return (
-      <div>
+      <div className = "clockSettings">
         <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
         <button
           className="btn btn-secondary btn-sm"
           onClick={this.handleIncrement}
         >
-          Increment
+          +
         </button>
       </div>
     );
