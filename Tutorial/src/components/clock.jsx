@@ -18,7 +18,7 @@ class Clock extends Component {
     return(
       <div className = "clock">
         this.state = {this.getTime()}
-
+        
       </div>
     )
   }

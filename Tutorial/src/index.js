@@ -5,15 +5,15 @@ import "bootstrap/dist/css/bootstrap.css";
 import * as serviceWorker from "./serviceWorker";
 import Welcome from "./components/welcome";
 
-const element = <Welcome name = "admin" password = "password" />;
-
-function tick(){
-  const element = <Welcome name = "admin" password = "password" />;
+function tickTock(){
+  const element = <Welcome />;
 
   ReactDOM.render(
     element,
-    document.getElementById("root"));
+    document.getElementById("clock"));
 
 }
 
-setInterval(tick, 1000);
+setInterval(tickTock, 1000);
+
+serviceWorker.register();
