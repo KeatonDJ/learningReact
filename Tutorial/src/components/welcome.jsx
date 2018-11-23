@@ -5,7 +5,7 @@ class Welcome extends Component {
   state = {
     time : "",
     timeZone : 6,
-    alarmTime : "05:52:00"
+    alarmTime : "00:00:00"
   }
 
   constructor() {
@@ -31,8 +31,8 @@ class Welcome extends Component {
           </div>
 
           <h2>AlarmTime = {this.state.alarmTime}</h2>
-          <button onClick = {this.upDateAlarmHour}>Hr+</button>
-          <button onClick = {this.upDateAlarmMin}>Min+</button>
+          <button onClick = {this.upDateAlarmHour} className="btn btn-primary">Hr+</button>
+          <button onClick = {this.upDateAlarmMin} className="btn btn-primary">Min+</button>
         </div>
     )
   }
@@ -40,6 +40,8 @@ class Welcome extends Component {
   upDate(){
     var date = new Date();
     var hrs = date.getUTCHours();
+
+
 
     if(this.state.timeZone >= 0 && this.state.timeZone <= 12){
       hrs -= this.state.timeZone;
@@ -63,7 +65,6 @@ class Welcome extends Component {
 
     let retDate = hrs + ":" + min + ":" + sec;
 
-    console.log(this.state.alarmTime);
     if(this.state.alarmTime === retDate){
       alert("Alarm!!!");
     }

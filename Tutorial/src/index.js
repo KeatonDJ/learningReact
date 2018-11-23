@@ -14,6 +14,7 @@ function tickTock(){
 
 }
 
+
 setInterval(tickTock, 1000);
 
 serviceWorker.register();
